@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+
+	<listeners>
+		<listener class-name='reportConfig.MethodListener' />
+<!-- 		<listener class-name='retryTest.RetryListener' /> -->
+<!-- 		<listener class-name='reportScreenshot.ReportNGListener' /> -->
+		<listener class-name='org.uncommons.reportng.HTMLReporter' />
+		<listener class-name='org.uncommons.reportng.JUnitXMLReporter' />
+<!-- 		<listener class-name='reportConfig.ExtentReportListenerV2' /> -->
+		<listener class-name='reportScreenshot.ExtentTestListener' />
+		
+	</listeners>
+
+  <test name="Run Test on BRAVE">
+    <parameter name="browser" value="chrome_ui"></parameter>
+    <parameter name="url" value="http://demo.guru99.com/v4/"></parameter>
+
+    <classes>
+      <class name="bankGuru.payment.BankGuru_01_Payment_Process"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
